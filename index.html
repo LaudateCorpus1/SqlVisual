@@ -16,6 +16,7 @@
     <link rel="stylesheet" href="css/drawer.css" />
     <link rel="stylesheet" href="css/nooverflow.css" />
     <link rel="stylesheet" href="css/index.css" />
+    <link href="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/4.5.3/css/bootstrap.min.css" rel="stylesheet">
   </head>
 
   <body>
@@ -125,6 +126,11 @@
             <span>↩️</span>
             <span class="hideable">Undo</span>
           </button>
+          <button title="Show graph" aria-label="Show graph" name="button" id="show-graph">
+            <span>🚀</span>
+            <span class="hideable">Show Graph</span>
+          </button>
+
           <button class="flex-float-right-first" id="btn-show-parse-problem">
             <span id="span-parse-continue">…</span>
             <span id="span-parse-error">❌</span>
@@ -143,8 +149,7 @@
 
 
         </div> -->
-        <button type="button" name="button" id="show-graph">查看数据流图</button>
-
+        
         <div id="inspector" style="height: calc(100% - 2.5px)">
 
         </div>
@@ -155,9 +160,14 @@
       <div class="workflow-wrapper">
         <div class="info">
           <h3>Workflow of Sql</h3>
-          <button type="button" name="button" class="btn btn-primary" id="refresh-workflow">复原</button>
-          <button type="button" name="button" class="btn btn-primary" id="back-edit">返回编辑</button>
-          <input type="checkbox" name="" value="允许自定义新流向" id="enable-arrow">允许自定义新流向
+          <button type="button" name="button" class="btn" id="refresh-workflow" style="margin-left:10px;border: 2px solid silver;">复原</button>
+          <button type="button" name="button" class="btn" id="back-edit" style="margin-left:10px;border:2px solid silver;">返回编辑</button>
+          <div class="checkbox" style="margin-left:70px; display:inline;">
+            <label>
+              <input type="checkbox" class="form-check-input" id="enable-arrow">
+              允许自定义新流向
+          </label>
+          </div>
         </div>
 
             <div class="workflow" id="workflow-1">
@@ -248,7 +258,7 @@
   		<script src="js/core/jquery.jsPlumb.js"></script>
 
   		<!--  jsWorkflow -->
-  		<script src="js/jsWorkflow.js"></script>
+  		<script src="js/lib/jsWorkflow.js"></script>
 
 
       <!-- main -->

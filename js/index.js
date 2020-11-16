@@ -395,6 +395,7 @@ function recursiveSearch(item, parent_id) {
 }
 
 
+
 function initializeElements(nodes, edges){
 
 
@@ -471,7 +472,7 @@ function initializeElements(nodes, edges){
     divState.className = "w state";
     divState.id = "node-" + nodes[i].id;
     divState.innerHTML = nodes[i].name + divEp.outerHTML;
-    divState.style.top = (150 * (nodes[i].depth)) + 'px';
+    divState.style.top = (150 * (nodes[i].depth) + 50) + 'px';
     divState.style.left = (50 + 600 * ((maxWidth - nodeDepthWidth[nodes[i].depth-1]++) / 2 + currentLayout[nodes[i].depth-1]++)) + 'px';
     $("#workflow-1").append(divState);
   }
